@@ -8,7 +8,7 @@ const Page: React.FC = () => {
     <>
       <NavBar />
       <Box sx={{ mt: 4, ml: 15, mr: 15 }}>
-        <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 4 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', mb: 2 }}>
           <Box
             sx={{ width: 466, height: 344 }}
           >
@@ -26,6 +26,7 @@ const Page: React.FC = () => {
                   fullWidth
                   label="Name"
                   variant="outlined"
+                  size="small"
                 />
               </Box>
               <Box sx={{ flexGrow: 1 }}>
@@ -36,6 +37,7 @@ const Page: React.FC = () => {
                   fullWidth
                   label="Email"
                   variant="outlined"
+                  size="small"
                 />
               </Box>
             </Box>
@@ -66,6 +68,7 @@ const Page: React.FC = () => {
                   fullWidth
                   label="Job Title"
                   variant="outlined"
+                  size="small"
                 />
               </Box>
               <Box sx={{ flexGrow: 1 }}>
@@ -76,6 +79,7 @@ const Page: React.FC = () => {
                   fullWidth
                   label="Company"
                   variant="outlined"
+                  size="small"
                 />
               </Box>
             </Box>
@@ -90,7 +94,21 @@ const Page: React.FC = () => {
             </Box>
           </Box>
         </Box>
-        <Box sx={{ width: '100%', mt: 2 }}> {/* Adjust width and margin as needed */}
+        <Box sx={{ width: '50%' }}> 
+        <Box sx={{ flexGrow: 1, mb: 2 }}>
+          <Typography variant="h5">
+            Other Questions
+          </Typography>
+          </Box>
+          <TextField
+            fullWidth
+            label="Job Title"
+            variant="outlined"
+            multiline
+            rows={6}
+          />
+        </Box>
+        <Box sx={{ width: '50%', mt:2}}> {/* Adjust width and margin as needed */}
           <Typography variant="h5">
             Resume
           </Typography>
@@ -100,9 +118,14 @@ const Page: React.FC = () => {
             variant="contained"
             tabIndex={-1}
             startIcon={<CloudUploadIcon />}
-            sx={{mt:1}}
+            sx={{ mt: 1 }}
           >
             Upload file
+          </Button>
+        </Box>
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 2 }}>
+          <Button variant="contained" sx={{ mt: 1 }}>
+            Generate
           </Button>
         </Box>
       </Box>
